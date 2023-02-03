@@ -1,7 +1,8 @@
-import "./wdyr";
-import * as ReactDOM from "react-dom";
-import App from "./App";
+import * as ReactDOM from 'react-dom';
+import './wdyr';
+
+import App from './App';
 // import "@fontsource/roboto/latin-400.css";
 // import "@fontsource/roboto/latin-700.css";
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
