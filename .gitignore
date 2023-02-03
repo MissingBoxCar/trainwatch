@@ -1,0 +1,22 @@
+# npm
+node_modules
+
+# yarn
+.yarn
+.yarnrc.yml
+.pnp.cjs
+yarn.lock
+
+# parcel
+/.parcel-cache
+/dist
+/parcel-bundle-reports
+
+# macOS
+.DS_Store
+
+# IDEs
+**.idea
+.vscode
+
+*.trace

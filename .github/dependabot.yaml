@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  - directory: "/"
+    package-ecosystem: "yarn"
+    schedule:
+      interval: "weekly"
+    reviewers:
+      - "Lagicrus"
+
+  - directory: "/"
+    package-ecosystem: "github-actions"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "Lagicrus"
