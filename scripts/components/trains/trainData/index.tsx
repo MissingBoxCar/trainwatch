@@ -5,7 +5,7 @@ import StraightenOutlinedIcon from '@mui/icons-material/StraightenOutlined';
 import TrainOutlinedIcon from '@mui/icons-material/TrainOutlined';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
-import { Card, CardHeader, Chip, Stack } from '@mui/material';
+import { CardHeader, Chip, Stack } from '@mui/material';
 import * as React from 'react';
 
 interface TrainDataProps {
@@ -23,7 +23,7 @@ interface TrainDataProps {
 
 export default function TrainData({ processedData }: TrainDataProps) {
   return (
-    <Card>
+    <>
       <CardHeader
         title={`Scanner: ${processedData.scannerName}`}
         subheader={`Train Symbol: ${processedData.trainSymbol}`}
@@ -60,6 +60,6 @@ export default function TrainData({ processedData }: TrainDataProps) {
           avatar={<StraightenOutlinedIcon />}
         />
       </Stack>
-    </Card>
+    </>
   );
 }

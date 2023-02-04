@@ -1,5 +1,12 @@
-interface Cart {
+export interface Car {
   direction: string;
+  roadName: string;
+  unitNumber: string;
+  isLoaded: boolean;
+  weight: number;
+  destination: string;
+  defect: string;
+  fileName: string;
 }
 
 export default function mapper(rawTrain: unknown) {
@@ -13,8 +20,15 @@ export default function mapper(rawTrain: unknown) {
     totalTons: Intl.NumberFormat('en-US').format(rawTrain[6]),
     trainLengthFt: Intl.NumberFormat('en-US').format(rawTrain[7]),
   };
-  const cartInfo: Cart[] = rawTrain[8].map((cart: unknown) => ({
-    direction: cart[0],
+  const carInfo: Car[] = rawTrain[8].map((car: unknown) => ({
+    direction: car[0],
+    roadName: car[2],
+    unitNumber: car[3],
+    isLoaded: car[4] === 'true',
+    weight: Intl.NumberFormat('en-US').format(car[5]),
+    destination: car[6],
+    defect: car[7],
+    fileName: car[8],
   }));
-  return { trainInfo, cartInfo };
+  return { trainInfo, cartInfo: carInfo };
 }
