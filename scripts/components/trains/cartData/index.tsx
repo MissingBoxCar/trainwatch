@@ -4,7 +4,6 @@ import DangerousOutlinedIcon from '@mui/icons-material/DangerousOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import MultipleStopOutlinedIcon from '@mui/icons-material/MultipleStopOutlined';
 import ScaleOutlinedIcon from '@mui/icons-material/ScaleOutlined';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import WidgetsIcon from '@mui/icons-material/Widgets';
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
 import { Avatar, CardContent, CardHeader, Chip } from '@mui/material';
@@ -63,10 +62,6 @@ export default function CartData({ cartInfo }: CartDataProps) {
             <Chip
               label={`Defect: ${cart.defect}`}
               avatar={<DangerousOutlinedIcon />}
-            />
-            <Chip
-              label={`File Name: ${cart.fileName}`}
-              avatar={<SearchOutlinedIcon />}
             />
           </CardContent>
         </>
